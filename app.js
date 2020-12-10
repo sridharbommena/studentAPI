@@ -1,8 +1,10 @@
 import express, { json, request, response } from 'express'
 import cors from 'cors'
 import router from './routes/details.js';
-// import dotenv from 'dotenv' ;
-// dotenv.config();
+import resultRouter from './routes/result.js';
+
+import dotenv from 'dotenv' ;
+dotenv.config();
 
 const app = express();
 
@@ -12,6 +14,7 @@ app.use(cors());
 
 app.use("/details" , router);
 
+app.use("/results" , resultRouter);
 
 app.get("/" , (request , response) =>
 {

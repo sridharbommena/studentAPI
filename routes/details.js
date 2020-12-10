@@ -1,8 +1,8 @@
 import express from 'express' ;
-// import dotenv from 'dotenv' ;
+import dotenv from 'dotenv' ;
 import mongodb from 'mongodb' ;
 
-// dotenv.config();
+dotenv.config();
 
 const router = express.Router();
 
@@ -31,6 +31,13 @@ router.get("/:id" , (req ,res) =>
     res.json(result) ;
 
         });
+
+        /*  
+    code for getting the response in React
+fetch("http://localhost:3000/details/16tr1a0520")
+.then((response) => response.json())
+.then(res => console.log(res) )
+*/
     
 });
 }
